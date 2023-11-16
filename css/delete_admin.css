@@ -1,0 +1,34 @@
+.container{
+    background-color: white;
+    margin: 50px;
+    text-align: center;
+    padding: 50px 1px;
+}
+.danger_pic{
+    width: 13vw;
+}
+.bt{
+    background-color: red;
+    color: aliceblue;
+    font-weight: 600;
+    font-size: 28px;
+    padding: 5px 15px;
+    border: none;
+    margin: 35px;
+    box-shadow: 5px 5px 10px rgb(255, 87, 87);
+    border-radius: 5px;
+
+}
+.cancel{
+    background-color: rgb(3, 156, 11);
+    color: aliceblue;
+    font-weight: 600;
+    font-size: 28px;
+    padding: 7px 34px;
+    border: none;
+    margin: 35px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgb(40, 252, 57);
+
+
+}
