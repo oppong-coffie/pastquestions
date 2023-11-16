@@ -7,7 +7,7 @@ body:before{
   position: fixed;
   width: 100vw;
   height: 100vh;
-  background-image: url("../images/rt.jpg");
+  /* background-image: url("../images/rt.jpg"); */
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -17,7 +17,7 @@ body:before{
   -o-filter: blur(10px);
   -ms-filter: blur(10px);
   filter: blur(10px);
-}
+} 
 
 form{
   background-color: black;

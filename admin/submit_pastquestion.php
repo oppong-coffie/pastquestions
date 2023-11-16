@@ -1,7 +1,7 @@
 <?php
 if(isset($_POST['submit'])){
 // include database connection
-include './database_con.php';
+include '../components/database_con.php';
 
 // get variables
 $course_name=$_POST['course_name'];
@@ -21,7 +21,7 @@ $year=$_POST['year'];
     }
 
 // sql to insert data
-$sql="INSERT INTO questions(`course_name`, `qualification`, `level`, `year`, `questions`) VALUES('$course_name', '$qualification', '$level', '$year', '$uploadedFile')";
+$sql="INSERT INTO questions(`course_name`, `qualification`, `level`, `year`, `question`) VALUES('$course_name', '$qualification', '$level', '$year', '$uploadedFile')";
 
 // querry the statement
 $query=mysqli_query($dbcon, $sql);

@@ -22,7 +22,7 @@
 
                     <div class="position-relative form-group">
                         <label for="levelSelect" class="">Question</label>
-                        <textarea id="myTextArea" name="question" rows="4" cols="50" placeholder="Explain the reason for the correct answer"></textarea>
+                        <textarea id="myTextArea" name="question" rows="4" cols="50" placeholder="Type the questions here"></textarea>
                     </div>
 
                     <div class="position-relative form-group">
