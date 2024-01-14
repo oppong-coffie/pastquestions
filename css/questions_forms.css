@@ -1,0 +1,32 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+body:before{
+  content: '';
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  /* background-image: url("../images/rt.jpg"); */
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -o-filter: blur(10px);
+  -ms-filter: blur(10px);
+  filter: blur(10px);
+} 
+
+form{
+  background-color: black;
+  padding: 30px;
+}
+.card{
+  position: absolute;
+  top: 50%;
+  left: 20%;
+}
+
+
