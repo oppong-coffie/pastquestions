@@ -20,18 +20,26 @@
                                 <option value="java">JAVA</option>
                                 <option value="cpp">C++</option>
                                 <option value="hci">HCI</option>
+                                <option value="e commerce">E. Commerce</option>
+                                <option value="african studies">AFRICAN STUDIES</option>
                                 <option value="database">DATABASE CONCEPT</option>
+                                <option value="com. skills">COMMUNICATION SKILLS</option>
+                                <option value="infotech">INFORMATION TECHNOLOGY</option>
+                                <option value="com app">COMPUTER APPLICATION</option>
+                                <option value="prob & stat">PROBABILITY AND STATISTICS</option>
+                                <option value="basic electronics">BASIC ELECTRONICS</option>
+                                <option value="principles">PRINCIPLES OF PRINCIPLES</option>
+                                <option value="accounting1">ACCOUNTING 1</option>
                             </select>
                         </div>
 
                         <div class="position-relative form-group">
                             <label for="levelSelect" class="">Level</label>
                             <select name="level" id="levelSelect" class="form-control">
-                                <option value="">-- Select Level --</option>
-                                <option value="100">100</option>
-                                <option value="200">200</option>
-                                <option value="300">300</option>
-                                <option value="400">400</option>
+                                <option value="">-- Exams Type --</option>
+                                <option value="Mid-Sem">Mid-Sem</option>
+                                <option value="Resit">Resit</option>
+                                <option value="Exams">End of Semester</option>
                             </select>
                         </div>
 

@@ -17,16 +17,11 @@ th{
     color: rgb(192, 185, 245);
 }
 
-/* Tablet responsiveness */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-
-}
 
 /* Phone responsiveness */
-@media screen and (min-width: 375px) and (max-width: 767px) {
+@media screen and (max-width: 767px) and (min-width: 375px) {
 
     #btech{
-        font-weight: 100;
         padding: 0px;
     }
     td, th{
@@ -35,6 +30,22 @@ th{
     }
     th{
         color: rgb(192, 185, 245);
+    }
+    
+}
+
+@media screen and (max-width: 374px) {
+
+    #btech{
+        font-weight: 100px;
+        padding: 10px;
+    }
+    td, th{
+        padding-left: 7px;
+        text-align: center;
+    }
+    th{
+        color: rgb(245, 185, 185);
     }
     
 }

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Dec 20, 2023 at 11:01 AM
+-- Generation Time: Feb 29, 2024 at 01:03 PM
 -- Server version: 10.6.15-MariaDB-cll-lve
 -- PHP Version: 7.2.34
 
@@ -24,6 +24,287 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `access_exams`
+--
+
+CREATE TABLE `access_exams` (
+  `id` int(11) NOT NULL,
+  `course_name` varchar(250) NOT NULL,
+  `qualification` varchar(250) NOT NULL,
+  `year` varchar(250) NOT NULL,
+  `question` varchar(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `access_exams`
+--
+
+INSERT INTO `access_exams` (`id`, `course_name`, `qualification`, `year`, `question`) VALUES
+(1, 'cpp', 'HND', '2010', 'hci21l200.pdf'),
+(2, 'java', 'Btech', '2023', 'hci21l200.pdf'),
+(3, 'hci', 'Btech', '2023', 'hci21l200.pdf');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `access_practice_questions`
+--
+
+CREATE TABLE `access_practice_questions` (
+  `id` int(11) NOT NULL,
+  `course_name` varchar(250) NOT NULL,
+  `question` varchar(255) NOT NULL,
+  `optionA` varchar(250) NOT NULL,
+  `optionB` varchar(250) NOT NULL,
+  `optionC` varchar(250) NOT NULL,
+  `optionD` varchar(250) NOT NULL,
+  `answer` varchar(250) NOT NULL,
+  `explaination` varchar(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `access_practice_questions`
+--
+
+INSERT INTO `access_practice_questions` (`id`, `course_name`, `question`, `optionA`, `optionB`, `optionC`, `optionD`, `answer`, `explaination`) VALUES
+(3, 'maths.obj', ' What is the sum of 130+125+191?', '335', '448', '446', '426', 'C', ''),
+(4, 'maths.obj', ' If we minus 712 from 1500, how much do we get?', '788', '778', '768', '758', 'A', ''),
+(5, 'maths.obj', ' If we minus 712 from 1500, how much do we get?', '788', '778', '768', '758', 'A', ''),
+(6, 'maths.obj', ' 50 times of 8 is equal to:', '80', '400', '800', '4000', 'B', ''),
+(7, 'maths.obj', '110 divided by 10 is:', '11', '10', '5', 'none of the above', 'A', ''),
+(8, 'maths.obj', ' 20+(90÷2) is equal to:', '50', '55', '65', '60', 'C', ''),
+(9, 'maths.obj', 'The product of 82 and 5 is:', '400', '410', '420', 'none of the above', '', ''),
+(10, 'maths.obj', 'Find the missing terms in multiple of 3: 3, 6, 9, __, 15', '10', '11', '12', '13', 'C', ''),
+(11, 'maths.obj', ' Solve 24÷8+2.', '5', '6', '8', '12', '', ''),
+(12, 'maths.obj', ' Solve: 300 – (150×2)', '150', '100', '50', '0', 'D', ''),
+(13, 'maths.obj', 'The product of 121 x 0 x 200 x 25 is', '1500', '0', '4000', 'none of the above', 'B', ''),
+(14, 'maths.obj', ' What is the next prime number after 5?', '6', '7', '9', '11', 'B', ''),
+(15, 'maths.b', 'The circumference of the circle is also sometimes called:', '.', '.', '.', '.', 'Perimeter of a circle', '.'),
+(16, 'maths.b', '13: 90 – 35 is equal to:', '.', '.', '.', '.', '55', '.'),
+(17, 'maths.b', ' 72 divided by 8 is equal to:', '.', '.', '.', '.', '9', '.'),
+(18, 'maths.b', ' How many sides does a decagon have?', '.', '.', '.', '.', 'Ten', '.'),
+(19, 'maths.b', ' Is -5 an integer? Yes or No.', '.', '.', '.', '.', 'Yes', '.'),
+(20, 'maths.b', ' The value of pi is equal to:', '.', '.', '.', '.', ': 22/7 or 3.14', '.'),
+(21, 'maths.b', ' 9 x 7 is equal to:', '.', '.', '.', '.', '63', '.'),
+(22, 'maths.b', 'Is triangle a two-dimensional or three-dimensional shape?', '.', '.', '.', '.', 'A two-dimensional shape\r\n\r\n', '.'),
+(23, 'maths.b', ' An equilateral triangle has two of its sides equal. True or false?', '.', '.', '.', '.', 'False', '.'),
+(24, 'maths.b', ' 10 is a natural number. True or false?', '.', '.', '.', '.', 'True', '.'),
+(25, 'maths.b', '22: -10 is a whole number. True or false?', '.', '.', '.', '.', '22: -10 is a whole number. True or false?', '.'),
+(26, 'maths.b', '8 raised to the power 0 is equal to:', '.', '.', '.', '.', '1\r\n\r\n80 = 1', '.'),
+(27, 'maths.b', 'The largest 4 digit number is:', '.', '.', '.', '.', '9999', '.'),
+(28, 'maths.b', 'e smallest 4-digit number is:', '.', '.', '.', '.', '1000', '.'),
+(29, 'maths.b', ' The square of 8 is equal to:', '.', '.', '.', '.', '64', '.'),
+(30, 'maths.b', ' The square root of 5 is:', '.', '.', '.', '.', '2.23', '.'),
+(31, 'maths.b', ' 3 is a perfect square. True or False?', '.', '.', '.', '.', 'False', '.'),
+(32, 'maths.b', ' Cube of 5 is equal to:', '.', '.', '.', '.', '125', '.'),
+(33, 'maths.b', ' Cube root of 1331 is:', '.', '.', '.', '.', '11\r\n1331 = 11 x 11 x 11 = 113\r\n\r\n', '.'),
+(34, 'maths.b', ' 27 is a perfect cube. True or False?', '.', '.', '.', '.', 'True\r\n\r\n27 = 3 x 3 x 3= 33', '.'),
+(35, 'maths.b', ' A square has all its angles equal to:', '.', '.', '.', '.', ' 90 degrees', '.'),
+(36, 'maths.b', ' The area of rectangle is equal to:', '.', '.', '.', '.', 'Length x Breadth', '.'),
+(37, 'maths.b', ' If a is the side of cube, then the volume of the cube is:', '.', '.', '.', '.', 'a3', '.'),
+(38, 'maths.b', 'A regular polygon has all its sides:', '.', '.', '.', '.', 'Equal', '.'),
+(39, 'maths.obj', ' What is three fifth of 100?', '3', '5', '20', '60', 'D', ''),
+(40, 'maths.obj', ' 121 Divided by 11 is ', '11', '10', '19', '18', 'A', ''),
+(41, 'maths.obj', '60 Times of 8 Equals to', '480', '300', '250', '400', 'A', ''),
+(42, 'maths.obj', ' Find the Missing Term in Multiples of 6 : 6, 12, 18, 24, _, 36, 42, _ 54, 60.', '32, 45', '30, 48', '24, 40', '25, 49', 'B', ''),
+(43, 'maths.obj', 'What is the Next Prime Number after 7 ?', '13', '12', '14', '11', 'D', ''),
+(44, 'maths.obj', 'The Product of 131 × 0 × 300 × 4', '11', '0', '46', '45', 'B', ''),
+(45, 'maths.obj', 'Solve 3 + 6 × ( 5 + 4) ÷ 3 - 7', '11', '16', '14', '15', 'C', ''),
+(46, 'maths.obj', ' Solve 23 + 3 ÷ 3', '24', '25', '26', '27', 'A', ''),
+(47, 'maths.obj', 'What is 6% Equals to', '0.06', '0.6', '0.006', '0.0006', 'A', ''),
+(48, 'maths.obj', 'How Many Years are there in a Decade?', '5 years ', '10 years', '15 years', '20 years', 'B', ''),
+(49, 'maths.obj', ' How Many Months Make a Century?', '12', '120', '1200', '12000', 'C', ''),
+(50, 'maths.obj', 'Priya had 16 Red Balls, 2 Green Balls, 9  Blue Balls, and 1 Multicolor Ball. If He Lost 9 Red Balls, 1 Green Ball, and 3 Blue Balls. How Many Balls would be Left?', '15', '11', '28', '39', 'A', ''),
+(51, 'maths.obj', ' Add the Decimals 5.23 + 8.79', '14.02', '14.19', '14.11', '14.29', 'A', ''),
+(52, 'maths.obj', 'How Many Months Have 120 Days?', '2 months', '4 months', '11 months', '12 months ', 'B', ''),
+(53, 'maths.obj', 'How Many Sides are there in a Decagon?', '7', '8', '9', '10', 'D', ''),
+(54, 'maths.obj', 'What Number Comes Before 9019?', '9098', '9091', '9097', 'none of the above', 'D', ''),
+(55, 'maths.obj', 'What is the product of 121 x 0 x 20 x 2.5 - ', '6050', '0', '2,420', 'none of the above', 'B', ''),
+(56, 'maths.obj', ' Look at this series: 36, 34, 30, 28, …, 22 What number should come to fill in the blank space', '25', '24', '26', 'none of the above', '', ''),
+(57, 'maths.obj', ' 27 is a perfect cube. If true then what is the perfect cube of 27? ', '9', '6', '3', '27 is not a perfect cube', 'C', ''),
+(58, 'maths.obj', 'If x + 6 = 9, then 3x + 1 =', '3', '9', '10', '46', 'C', ''),
+(59, 'maths.obj', ' Bill is ten years older than his sister. If Bill was twenty-five years of age in 1983, in what year could he have been born?', '1948', '1953', '1958', '1963', 'C', ''),
+(60, 'maths.obj', 'What is the approximate value of the square root of 1596?', '10', '20', '30', '40', 'D', ''),
+(61, 'maths.obj', ' If x is a positive integer in the equation 12x = q, then q must be', 'a positive even integer.', 'a negative even integer.', 'zero', 'a positive odd integer.', 'A', ''),
+(62, 'maths.obj', ' What is 2 x 5?', '5', '3', '29', '10', 'D', ''),
+(63, 'maths.obj', 'What is - 15 + 15?', '30', '18', '0', '-30', 'C', ''),
+(64, 'maths.obj', 'What is 253 x 34?', '8602', '1255', '5455', '55566', 'A', ''),
+(65, 'maths.obj', 'What is 250 x 4?', '750', '1000', '10000', '500', 'B', ''),
+(66, 'maths.obj', 'What is 76 x 6 - 24?', '432', '98', '565', '222', 'A', ''),
+(67, 'maths.obj', ' What is 7291 + 8830?', '16121', '10', '3333', '95554', 'A', ''),
+(68, 'maths.obj', '', '56', '34', '21', ' 26', 'D', ''),
+(69, 'maths.obj', 'What is 372910/5?', '745122', '74589', '74582', '3232', 'C', ''),
+(70, 'maths.obj', 'What is 761 x 28?', '23244', '21308', '213865', '2321', 'B', ''),
+(71, 'maths.obj', 'What is -45 + 55?', '10', '19', '14', '426', 'A', ''),
+(72, 'maths.obj', ' If x is a set and the set contains an integer which is neither positive nor negative then the set x is ____________.', 'Set is Empty', 'Set is Non-empty', 'Set is Finite.', 'Set is both Non- empty and Finite.', 'D', ''),
+(73, 'maths.obj', 'If x ∈ N and x is prime, then x is ________ set.', 'Infinite set', 'Finite set', 'Empty set', 'Not a set', 'A', ''),
+(74, 'maths.obj', 'If x is a set and the set contains the real number between 1 and 2, then the set is ________.', 'Empty set', 'Finite set', 'Infinite set', 'None of the mentioned', 'C', ''),
+(75, '', '', '{1, 2}', '{1, 2, 3}', '{1}', 'All of the mentioned', 'D', ''),
+(76, 'maths.obj', 'Convert the set x in roster form if set x contains the positive prime number, which divides 72.', '{∅}', '{2, 3}', '{2, 3, 7}', '{3, 5, 7}', 'B', ''),
+(77, 'maths.obj', 'Power set of empty or Null set has exactly _________ subset.', 'One', 'Two', 'Zero', 'Three', 'A', ''),
+(78, 'maths.obj', 'What is the Cartesian product of set A and set B, if the set A = {1, 2} and set B = {a, b}?', '{ (1, a), (1, b), (2, a), (b, b) }', '{ (1, 1), (2, 2), (a, a), (b, b) }', '{ (1, a), (2, a), (1, b), (2, b) }', '{ (1, 1), (a, a), (2, a), (1, b) }', 'C', ''),
+(79, 'maths.obj', 'The members of the set S = {x | x is the square of an integer and x < 100} is ________________', '{0, 2, 4, 5, 9, 55, 46, 49, 99, 81}', '{1, 4, 9, 16}', '{0, 1, 4, 9, 16, 25, 36, 49, 64, 81}', '{0, 1, 4, 9, 25, 36, 49, 123}', 'C', ''),
+(80, 'maths.obj', 'The intersection of the sets {1, 2, 8, 9, 10, 5} and {1, 2, 6, 10, 12, 15} is the set _____________', '{1, 2, 10}', '{5, 6, 12, 15}', '{2, 5, 10, 9}', 'sd) {1, 6, 12, 9, 8}', 'A', ''),
+(81, 'maths.obj', 'The difference of {1, 2, 3, 6, 8} and {1, 2, 5, 6} is the set ____________', '{1, 3}', '{5, 6, 8}', '{3, 8}', '{2, 6, 5}', 'C', ''),
+(82, 'maths.obj', ' If n(A) = 20 and n(B) = 30 and n(A U B) = 40 then n(A ∩ B) is?', '20', '30', '40', '10', 'D', ''),
+(83, 'maths.obj', ' Let the players who play cricket be 12, the ones who play football 10, those who play only cricket are 6, then the number of players who play only football are ___________, assuming there is a total of 16 players.', '16', '8', '4', '10', 'C', ''),
+(84, 'maths.obj', 'Which among the following can be taken as the discrete object?', 'People', 'Rational numbers', 'Integers', 'All of the mentioned', 'D', ''),
+(85, 'maths.obj', '', 'X = {5, 6} and Y = {6}', 'X = {5, 6, 8, 9} and Y = {6, 8, 5, 9}', 'X = {5, 6, 9} and Y = {5, 6}', 'X = {5, 6} and Y = {5, 6, 3}', 'B', ''),
+(86, 'maths.obj', ' The cardinality of the Power set of the set {1, 5, 6} is______________.', '5', '6', '8', '10', 'C', ''),
+(87, 'maths.obj', ' The Cartesian product of the (Set Y) x (Set X) is equal to the Cartesian product of (Set X) x (Set Y) or Not?', 'Yes', 'No', 'None of the above', 'I Don\"t know', 'B', ''),
+(88, 'maths.obj', 'How many elements in the Power set of set A= {{Φ}, {Φ, {Φ}}}?', '4 elements', '2 elements', '2 elements', '5 elements', 'A', ''),
+(89, 'maths.obj', ' Mathematics can be broadly categorized into how many types?', '3 types', '2 types', '5 types', '4 types', 'B', ''),
+(90, 'maths.obj', 'Which of the following function is not a mathematics function?', 'many to one', 'many to one', 'one to one', 'All of the mentioned', 'B', ''),
+(91, 'maths.obj', 'Which of the following function is also referred to as an injective function?', 'Many-to-one', 'Onto', 'One-to-One', 'None of the mentioned', 'C', ''),
+(92, 'maths.obj', ' How many injections are defined from set A to set B if set A has 4 elements and set B has 5 elements?', '24', '10', '144', '120', 'D', ''),
+(93, 'maths.obj', ' The function (gof) is _________ , if the function f and g are onto function?', 'Into function', 'one to one function', 'onto function', 'one-to-many function', 'C', ''),
+(94, 'maths.obj', 'How many bytes are needed for encoding 2000 bits of data?', '5 Byte', '2 bytes', '4 bytes', '8 bytes', 'B', ''),
+(95, 'maths.obj', ' The cardinality of the set of even positive integers less than 20 is__________?', '8', '10', '9', '12', 'C', ''),
+(96, 'maths.obj', ' If X = {2, 8, 12, 15, 16} and Y= {8, 16, 15, 18, 9} then union of X and Y is___________.', '{2, 8, 12, 15, 16}', '{ 8, 16, 15}', '{8, 16, 15, 18, 9}', '{2, 8, 9, 12, 15, 16, 18}', 'D', ''),
+(97, 'maths.obj', ' What is Floor function?', 'It maps the real number to the greatest previous integer', 'It maps the real number to the smallest previous integer', 'It maps the real number to the smallest following integer', 'None of the mentioned', 'B', ''),
+(98, 'maths.obj', 'What is Ceil function?', 'It maps the real number to the greatest previous integer', 'It maps the real number to the smallest previous integer', 'It maps the real number to the smallest following integer', 'None of the mentioned', 'C', ''),
+(99, 'maths.obj', 'What is the value of Floor(8.4) + Ceil(9.9)?', '18', '18', '20', '17', 'A', ''),
+(100, 'maths.obj', ' If a and b are two positive numbers that are less than one, then the maximum value of Floor(a+b) and Ceil(a+b) is?', 'Floor(a+b) is 0 and Ceil(a+b) is 1.', 'Floor(a+b) is 1 and Ceil(a+b) is 0.', 'Floor(a+b) is 1 and Ceil(a+b) is 2.', 'Floor(a+b) is 2 and Ceil(a+b) is 1', 'C', ''),
+(101, 'maths.obj', 'The number of reflexive closure of the relation {(0,1), (1,1), (1,3), (2,1), (2,2), (3,0)} on the set {0, 1, 2, 3} is________.', '256', '36', '6', '60', 'C', ''),
+(102, 'maths.obj', 'The number of transitive closure exists in the relation R = {(0,1), (1,2), (2,2), (3,4), (5,3), (5,4)} where {1, 2, 3, 4, 5} ∈ A is__________.', '{(0,1), (0,2), (1,2), (2,2), (3,4), (5,3), (5,4)}', '{(0,0), (4,4), (5,5), (1,1), (2,2), (3,3)}', '{(0,1), (1,2), (2,2), (3,4)}', '{(0,1), (5,3), (5,4), (1,1), (2,2)}', 'A', ''),
+(103, 'maths.obj', ' Which statement is incorrect if X and Y are the two non-empty relations on the set S.', 'If X and Y are transitive, then the intersection of X and Y is also transitive.', 'If X and Y are reflexive, then the intersection of X and Y is also reflexive.', 'If X and Y are symmetric, then the union of X and Y is not symmetric.', 'If X and Y are transitive, then the union of X and Y is not transitive.', 'D', ''),
+(104, 'maths.obj', 'Which option is the negation of the bits \"1001011\"?', '11011011', '10110100', '0110100', '1100100', 'C', ''),
+(105, 'maths.obj', ' Boolean algebra deals with how many values.', 'It deals with only four discrete values.', 'It deals with only five discrete values.', 'It deals with only three discrete values.', 'It deals with only two discrete values.', 'D', ''),
+(106, 'maths.obj', ' Which search compares each element with the searching element till not found?', 'Merge search', 'Sequential Search', 'Binary search', 'none of the mentioned', 'B', ''),
+(107, 'maths.obj', ' If a user wants to sort the unsorted list of n elements, then the insertion sort starts with which element of the list.', 'First element of the list', 'the second element of the list', 'the Third element of the list', 'the Fourth element of the list', 'B', ''),
+(108, 'maths.obj', ' What is the complexity of the bubble sort algorithm?', 'O(n2)', 'O(n)', 'O(log n)', 'O(n log n)', 'A', ''),
+(109, 'maths.obj', 'What is the worst case of a linear search algorithm?', 'When the searching item is present in the middle of the list.', 'When the searching item is the last element in the list.', 'When the searching is not available in the list.', 'When the searching item is the last element in the list or is not present in the list.', 'D', ''),
+(110, 'maths.obj', ' Which algorithm uses the previous outputs for finding the new outputs?', 'Dynamic Programming algorithms', 'Divide and Conquer algorithm', 'Brute Force algorithm', 'None of them', 'A', ''),
+(111, 'maths.obj', 'Which option is correct for representing an algorithm?', 'Pseudo codes', 'Flow charts', 'Statements in the common language', 'All of them', 'D', ''),
+(112, 'maths.obj', ' Which case does not exist in complexity theory?', 'Average case', 'Null case', 'Best case', 'Worst Case', 'B', ''),
+(113, 'eng.obj', 'They ______________ her and trusted her for years', 'know', 'had known', 'knew', 'known', 'C', ''),
+(114, 'eng.obj', 'Every morning she ______________ up early and gets ready for work.\r\n\r\n', 'is waking', 'has woken', 'had woken', 'wakes', 'D', ''),
+(115, 'eng.obj', 'People ______________ walk on grass.', 'couldn', 'needn\"t', 'mustn\"t', 'may not', 'C', ''),
+(116, 'eng.obj', 'World war I and World war II took place ______________ the 20th century.', 'on', 'in', 'at', 'into', 'B', ''),
+(117, 'eng.obj', 'They built this temple 3,000 years ago. This must ______________ a great civilization.', 'not have been', 'was', 'has been', 'has been have been', 'D', ''),
+(118, 'eng.obj', 'I wanted to go to the park, ______________ my mother refused.', 'but', 'or', 'so', 'and', 'A', ''),
+(119, 'eng.obj', 'Change the active voice in to passive voice:I will clean the house every Saturday. The house ______________ by me every Saturday.', 'cleaned', 'will cleaned', 'will be cleaned', 'None of the above', 'C', ''),
+(120, 'eng.obj', 'This must not happen again, ______________ you will be dismissed.', 'or', 'but', 'and', 'so', 'A', ''),
+(121, 'eng.obj', 'If A is equal to B and B is equal to C, ______________ A is equal to C.', 'than', 'then', 'so', 'none of the above', 'B', ''),
+(122, 'eng.obj', 'French people love cooking, ______________ the English dont seem very interested.', 'When', 'Whenever', 'where', 'Whereas', 'D', ''),
+(123, 'eng.obj', '______________ is the one who starts the communication.', 'sender', 'receiver', 'feedback', 'noise', 'A', ''),
+(124, 'eng.obj', '_____________ is the manner in which the encoded message is transmitted.', 'Message', 'Voice', 'Media', 'Channel', 'C', ''),
+(125, 'eng.obj', 'The receiver confirms to the sender that he has received the message and understood it through ______________.', 'feedback', 'decoding', 'encoding', 'receiving', 'A', ''),
+(126, 'eng.obj', 'There are ______________ C\"s in Communication principles.', 'eight', 'seven', 'nine', 'five', 'B', ''),
+(127, 'eng.obj', 'Most conflict is the result of ______________ communication.', 'effective', 'misunderstood', 'ineffective', 'spontaneous', 'B', ''),
+(128, 'eng.obj', 'A ______________ is a unit of sound.', 'syllable', 'letter', 'spelling', 'stress', 'A', ''),
+(129, 'eng.obj', 'Stressed words are considered as ______________.', 'content words', 'function words', 'non-stressed words', 'unaccented', 'A', ''),
+(130, 'eng.obj', 'The second rising tune is ______________.', 'the glide-up', 'the glide-down', 'the dive', 'the take-off', 'D', ''),
+(131, 'eng.obj', '______________ are powerful, they can be weapons of conflicts and confusion.', 'feedback', 'noise', 'words', 'media', 'C', ''),
+(132, 'eng.obj', 'With the change of ______________ different meanings can be expressed.', 'pitch', 'voice', 'accent', 'sounds', 'A', ''),
+(133, 'eng.obj', 'Attitudinal functions allow us to express ______________.', 'accent', 'emotions', 'grammar', 'new information', 'B', ''),
+(134, 'eng.obj', 'The listener is able to recognise the grammar in ______________ function.', 'attitudinal', 'accentual', 'grammatical', 'discourse', 'C', ''),
+(135, 'eng.obj', 'Which of these should be kept in mind while receiving a call?', 'Be rude, if the caller is rude.', 'If the information is not readily available, take his phone number and call back.', 'A message can be noted in hints.', 'You can be rude to a person if it\"s a wrong connection.', 'B', ''),
+(136, 'eng.obj', 'Euphemism helps writers to convey those ideas which have become a social ______________ and are too embarrassing to mention directly.', 'Norm', 'Taboo', 'Custom', 'Idealogy', 'B', ''),
+(137, 'eng.obj', 'Which of these is used after a nominative absolute?', 'Colon', 'Comma', 'Full Stop', 'Question mark', 'B', ''),
+(138, 'eng.obj', '______________ gave the service of dabbawalahs its highest quality rating of Sigma.', 'The Times of India', 'Times Magazine', 'Forbes Magazine', 'India Today', 'C', ''),
+(139, 'eng.obj', '\"Travel by train\" is delightful piece of ______________.', 'Drama', 'Poetry', 'Novel', 'Prose', 'D', ''),
+(140, 'eng.obj', 'Dabbawalas work with ______________', 'clarity and speed', 'precision and speed', 'carefulness and swiftness', 'precision and sharp', 'B', ''),
+(141, 'eng.obj', 'Whom does the \"playmate\" refer to in the poem \"Paper Boats\"?', 'A sister', 'A close friend', 'A distant relative', 'An imaginary friend', 'D', ''),
+(142, 'eng.obj', '______________ I ask a question? Yes, of course.', 'may', 'must', 'should', 'will', 'A', ''),
+(143, 'eng.obj', 'Last year, there were a large number of mangoes ______________ the tree.', 'in', 'at', 'with', 'on', 'D', ''),
+(144, 'eng.obj', 'The tress here are really beautiful ______________ the spring.', 'in', 'at', 'during', 'during', 'C', ''),
+(145, 'eng.obj', 'I live ______________ the river.', 'across', 'with', 'from', 'no', 'A', ''),
+(146, 'eng.obj', 'The Prime Minister will appear ______________ television tonight.', 'on', 'in', 'at', 'none of the above', 'A', ''),
+(147, 'eng.obj', 'The Prime Minister will appear ______________ television tonight.', 'on', 'in', 'at', 'none of the above', 'A', ''),
+(148, 'eng.obj', 'I like to eat cookies ______________ I like to drink milk.', 'that', 'for', 'and', 'after', 'C', ''),
+(149, 'eng.obj', '______________ all her friends were on holiday, she was alone.', 'Because of', 'Since', 'For', 'because', 'B', ''),
+(150, 'eng.obj', 'We went out ______________ the cold weather.', 'besides', 'although', 'However', 'despite', 'D', ''),
+(151, 'eng.obj', '______________ is the idea, information, view etc, that is generated by the sender.', 'Encoding', 'Message', 'Channel', 'Noise', 'B', ''),
+(152, 'eng.obj', '_____________ is one who initiates the communication.', 'receiver', 'spectator', 'audience', 'sender', 'D', ''),
+(153, 'eng.obj', 'Communication is a ______________ process.', 'three-way', 'four-way', 'two-way', 'five-way', 'C', ''),
+(154, 'eng.obj', '______________ forms of speech in the classroom is an integral part of pupils\" success.', 'Correct', 'generalIncorrect', 'Improper', 'Invalid', 'C', ''),
+(155, 'eng.obj', '______________ refers to the music of the English language.', 'Syllables and stress', 'Intonation and stress', 'Sounds and symbols', 'Accent and sounds', 'B', ''),
+(156, 'eng.obj', '____________ builds a strong business and personal relationships.', 'Effective Communication', 'Vague Communication', 'Oral Communication', '', 'A', ''),
+(157, 'eng.obj', '\"Eat\" is a ______________ syllable stressed word.', 'two', 'one', 'three', 'four', 'B', ''),
+(158, 'eng.obj', 'One should be quick learner and tend to acquire ______________ pronunciation.', 'good', 'good', 'ineffective', 'improper', 'A', ''),
+(159, 'eng.obj', 'The Diction exercises will help one learn how to ______________ clearly.', 'write', 'speak', 'read', 'listen', 'B', ''),
+(160, 'eng.obj', 'The secondary source of information comprised of ______________', 'Text books and research monographs.', 'Subject periodicals and encyclopedias.', 'indexing and abstracting periodicals.', 'Bibliography and patents.', 'C', ''),
+(161, 'eng.obj', 'Choose the correct statement:', 'My aunt who lives in Mumbai is a doctor.', 'My aunt, who lives in Mumbai, is a doctor.', 'My aunt, who lives in Mumbai is a doctor.', 'My aunt who lives in Mumbai, is a doctor.', 'B', ''),
+(162, 'eng.obj', 'Ragunath Medge is the ______________ of Nutan Mumbai Tiffin Box suppliers charity trust.', 'Secretary', 'Member', 'Treasurer', 'President', 'D', ''),
+(163, 'eng.obj', 'The ______________ are described as those who insist on keeping the windows open during the cold and desolate day.', 'noisy children', 'cranks', 'mighty sleepers', 'heavy carriers', 'B', ''),
+(164, 'eng.obj', 'Why does the poet call the last stage to be \"second childishness\" of a person?', 'He behaves like a child', 'He has to be taken care again like a child', 'He keeps forgetting everything', 'He is immature in behavior', 'B', ''),
+(165, 'eng.obj', 'Tagore\"s poetry had inspiration from traditional vaishnava folk and was often ______________.', 'metaphysical', 'contemporary', 'idealistic', 'deeply mystical', 'D', ''),
+(166, 'eng.obj', 'Madam Loisel was ______________ at the party organized by the Ministry of Education', 'a complete success', 'a complete failure', 'lovely person', 'lovable character', 'B', ''),
+(167, '', '', '', '', '', '', '', ''),
+(168, '', '', '', '', '', '', '', ''),
+(169, 'eng.obj', 'Who announced the entry of the cobra into the compound?', 'Dasa', 'The neighbor', 'The lady servant', '', 'D', ''),
+(170, 'eng.obj', 'Wait a minute, I ______________ this box for you.', 'carry', 'will carry', 'carried', 'was carrying', 'B', ''),
+(171, 'eng.obj', 'The whole day the boys ______________ to the cricket commentary.', 'Listen', 'will listen', 'has listened', 'are listening', 'D', ''),
+(172, 'eng.obj', 'It\"s wet and rainy outside today. You ______________ go out without an umbrella.', 'shouldn\"t', 'won\"t', 'dont  have to', 'should', 'A', ''),
+(173, 'eng.obj', '______________ you know where Ram lives?', 'does', 'do', 'should', 'have', 'A', ''),
+(174, 'eng.obj', 'I have been waiting ______________ the bus.', 'near', 'from', 'since', 'for', 'D', ''),
+(175, 'eng.obj', 'You won\"t pass the test ______________ you study.', 'when', 'if', 'but', 'unless', 'D', ''),
+(176, 'eng.obj', 'Change into passive:The salt-water corroded the metal beams. The metal beams ______________ by the salt-water.', 'was corroded', 'corroded', 'has corroded', 'were corroded', 'D', ''),
+(177, 'eng.obj', 'I like houses ______________ the river.', 'at', 'with', 'by', 'from', 'C', ''),
+(178, 'eng.obj', 'F1 races are ______________ fast that the wheels of their cars have to be special.', 'so', 'such', 'very much', 'much', 'A', ''),
+(179, 'eng.obj', '______________ is the act of conveying information.', 'Listening', 'Observing', 'Communication', 'Questioning', 'C', ''),
+(180, 'eng.obj', 'Communication often hold highly influential positions as', 'spectators', 'receiver', 'journalists', 'sender', 'C', ''),
+(181, 'eng.obj', 'Successful communication takes place when the receiver ______________ interprets the sender\"s message.', 'wrongly', 'ironically', 'correctly', 'actively', 'C', ''),
+(182, 'sci.obj', 'Managers need to deliver ______________ achievable goals to both teams and individuals.', 'unclear', 'clear', 'hazy', 'improper', 'B', ''),
+(183, 'eng.obj', 'By eliminating ______________ words, you can help to make ideas stand out.', 'necessary', 'repetitive', 'unnecessary', 'correct', 'C', ''),
+(184, 'eng.obj', '______________ refers to the emphasis laid on specific syllables of a word or a specific word in a sentence.', 'Syllables', 'Phonemes', 'Stress', 'Letters', 'C', ''),
+(185, 'eng.obj', '______________ words are the key to excellent pronunciation and understanding of English.', 'Stressed', 'Function', 'unaccented', 'non-stressed', 'A', ''),
+(186, 'eng.obj', 'The Glide-down are used for ______________ statements.', 'complete', 'incomplete', 'indefinite', 'imperfect', 'A', ''),
+(187, 'eng.obj', 'Message is ______________ when it contains all facts the listener needs.', 'confusing', 'complete', 'fluent', 'incomplete', 'B', ''),
+(188, 'eng.obj', '______________ are considered as Function Words.', 'Stressed', 'Accented', 'Non-stressed', 'Content', 'C', ''),
+(189, 'eng.obj', 'The vowel sounds are ______________ in number.', 'twenty', 'six', 'fifteen', 'eighteen', 'A', ''),
+(190, 'eng.obj', 'Which of these is not considered in a telephonic conversation?', 'The tone of the speaker', 'The volume of the speaker', 'Body language', 'The emotional content of the communication', 'C', ''),
+(191, 'eng.obj', '\"Kick the bucket\" is an Euphemism that describes', 'death of a person', 'illness of a person', 'that the person is not available at the moment', 'kicking the bucket', 'A', ''),
+(192, 'eng.obj', 'Year book are also known as ______________', 'Hand book', 'Annual', 'Directory', 'Dictionary', 'B', ''),
+(193, 'eng.obj', 'Intonation is the first step to be perceived by ear rather than the ______________ of an utteranc', 'oral content', 'verbal content', 'speech', 'monologue', 'B', ''),
+(194, 'eng.obj', 'Where was J.B.Priestley born?', 'Bradford', 'Manchester', 'Liverpool', 'Edinburgh', 'A', ''),
+(195, 'eng.obj', 'Rabindranath Tagore composed the Nation Anthem for ______________ & ______________.', 'India and Bangladesh', 'India and Pakistan', 'India and Sri Lanka', 'India and China', 'A', ''),
+(196, 'eng.obj', 'What is the unique feature of the success of the Mumbai dabbawalas business?', 'Mumbai\"s history', 'Mumbai\"s economy', 'Mumbai\"s geography', 'Mumbai\"s society', 'C', ''),
+(197, 'eng.obj', 'Tagore won the Nobel Prize in Literature in ______________.', '1913', '1914', '1915', '1923', 'A', ''),
+(198, 'eng.obj', 'The head master ______________ to talk to you.', 'want', 'wants', 'has wanted', 'None of the above', 'B', ''),
+(199, 'eng.obj', 'A bomb scare ______________ a delay of the flight.', 'causing', 'cause', 'was caused', 'had caused', 'D', ''),
+(200, 'eng.obj', 'If you want to learn to speak English fluently. You ______________ to work hard.', 'could', 'needn\"t', 'mustn\"t', 'need', 'D', ''),
+(201, 'eng.obj', 'I borrowed a pen ______________ my classmate', 'to', 'from', 'with', 'through', 'B', ''),
+(202, 'eng.obj', 'Change into passive: Everyone understands English. English ______________ by everyone.', 'is understood', 'has been understood', 'was understood', 'had understood', 'A', ''),
+(203, 'eng.obj', 'This house has been empty ______________ several years.', 'towards', 'for', 'from', 'none of the above', 'B', ''),
+(204, 'eng.obj', 'The diamond ring that her husband bought for her turned ______________ to be fake one.', 'in', 'of', 'out', 'none of the above', 'C', ''),
+(205, 'eng.obj', 'Recipients of a message must be able to identfy the ______________.', 'receiver\"s intent', 'receiver\"s perception', 'sender\"s intent', 'Speaker', 'C', ''),
+(206, 'eng.obj', '______________ refers to any obstruction that is caused by the sender.', 'Voice', 'Message', 'Speech', 'Noise', 'D', ''),
+(207, 'eng.obj', 'In ______________ five W\"s should be checked.', 'conciseness', 'clarity', 'completeness', 'consideration', 'C', ''),
+(208, 'eng.obj', 'The IPA or International Phonetic Alphabet is an alphabet of ______________.', 'letters', 'sounds', 'dialect', 'syllables', 'B', ''),
+(209, 'eng.obj', 'The first rising tune is ______________.', 'the glide-up', 'the glide-down', 'the dive', 'the take -off', 'B', ''),
+(210, 'eng.obj', 'A ______________ message saves time for both sender and receiver.', 'common', 'concise', 'intricate', 'confusing', 'B', ''),
+(211, 'eng.obj', 'During conversation we should ______________ patiently and ______________ tactfully.', 'speak; listen', 'listen; speak', 'write; speak', 'listen; write', 'B', ''),
+(212, 'eng.obj', 'The consonant sounds are ______________ in number.', 'twenty-two', 'twenty', 'twenty-three', 'twenty-four', 'D', ''),
+(213, '', '', '\"B\"', '\"L\"', '\"K\"', '\"R\"', 'B', ''),
+(214, 'eng.obj', '______________ means trying something new and different from your fashion comfort zone.', 'Mobile Community', 'Furlough Employees', 'Donning the idea', 'Donning the fedora', 'D', ''),
+(215, 'eng.obj', 'Which of these is used between sentences which are grammatically independent?', 'Colon', 'Semicolon', 'Comma', 'Hyphen', 'A', ''),
+(216, 'eng.obj', 'Explain a woeful ballad.', 'a love song', 'a happy song', 'a song of god', 'a sad song', 'D', ''),
+(217, 'eng.b', 'Write a letter to your friend in another school telling him or her about your future career and how it will be beneficial to your country.', '.', '.', '.', '.', 'WRITE THE ESSAY', '.'),
+(218, 'eng.b', 'The National Scholarship Secretariat is organizing an essay competition on the topic: The menace of fake drugs in the society. Write your entry.', '.', '.', '.', '.', 'WRITE THE ESSAY', '.'),
+(219, 'eng.b', 'As a former senior prefect, write a letter to the principal of your school on the occasion of its 60th anniversary celebration, congratulating him and offering three suggestions for the improvement of the school.', '.', '.', '.', '.', 'WRITE THE ESSAY', '.'),
+(220, 'eng.b', 'A new principal has just been posted to your school. As the senior prefect, write a welcome address on behalf of the students, pointing out three areas of need in the school.', '.', '.', '.', '.', 'WRITE THE ESSAY', '.'),
+(221, 'eng.b', 'Write a story which illustrates the saying: Uneasy lies the head that wears a crown.', '.', '.', '.', '.', 'WRITE THE ESSAY', '.'),
+(222, 'eng.obj', 'Which of the following is NOT a singular indefinite pronoun?', 'these', 'someone', 'everyone', 'each', 'A', ''),
+(223, 'eng.obj', 'Which of the following options is the antecedent in the sentence below?\r\n\r\nMy uncle opened his first business ten years ago, and he now owns three stores.', 'my', 'uncle', 'his', 'he', 'B', ''),
+(224, 'eng.obj', 'Which singular noun requires that you add an es to the end to make it plural?', 'proof', 'fox', 'keyboard', 'sister-in-law', 'B', ''),
+(225, 'eng.obj', 'To make the word key plural, you must', 'ass SS to the end', 'ass an S to the end', 'ass es to the end', 'do nathing', 'B', ''),
+(226, 'eng.obj', 'Which pronoun or pronouns should be used to correctly fill in the blank in the following sentence?\r\nEvery child in the class finished all of _____ homework.\r\n', 'their', 'his or her', 'one\"s', 'All of the above', 'B', ''),
+(227, 'eng.obj', 'Identify the error in the following sentence:\r\nThe lawyers held private meetings with all of their clients.', 'There is no error in this sentence', '', '', '', '', ''),
+(228, 'eng.obj', 'Which pronoun would correctly fill in the blank in the following sentence?\r\nI have talked to your teachers and your bosses, and _____ think that you\"ve been doing a great job.', 'them', 'he', 'their', 'they', 'D', ''),
+(229, 'eng.obj', 'Which pronoun would correctly fill in the blank in the following sentence?\r\nI think that either your husband or my cousins will bring _____ sound system to the party.', 'its', 'her', 'his', 'their', 'B', ''),
+(230, 'eng.obj', 'Identify the simple subject in the following sentence:\r\nThe quiz had ten questions.', 'The quiz', 'quiz', 'questions', 'ten questions', 'B', ''),
+(231, 'eng.obj', 'Identify the complete subject in the following sentence:\r\nThe red truck had a flat tire.', 'truck', 'tire', 'The red truck', 'red truck', 'C', ''),
+(232, 'eng.obj', 'Which of the following nouns is a proper noun?', 'cat', 'fireman', 'mountain', 'Central Park', 'D', ''),
+(233, 'eng.obj', 'Consider this sentence:\r\nAlvin studied for his test after going swimming.\r\nWhich of the following words from this sentence is a noun?', 'after', 'Alvin', 'for', 'studied', 'B', ''),
+(234, 'eng.obj', 'Which pronoun could correctly fill in the blank in the following sentence?\r\nJim and _____ went to school.', 'me', 'us', 'them', 'i', 'D', ''),
+(235, 'eng.obj', 'Which of the following pronouns is an objective case pronoun?', 'I', 'we', 'me', 'they', 'C', ''),
+(236, 'eng.obj', 'Which of the following choices is the correct possessive pronoun to fill in the blank in the following sentence?\r\nThe teacher told me that the choice was _____.', 'her\"s', 'my', 'her', 'mine', '', '');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `admins`
 --
 
@@ -31,6 +312,120 @@ CREATE TABLE `admins` (
   `id` int(255) NOT NULL,
   `name` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `answers`
+--
+
+CREATE TABLE `answers` (
+  `id` int(11) NOT NULL,
+  `fullname` varchar(250) NOT NULL,
+  `code` varchar(250) NOT NULL,
+  `student_id` varchar(250) NOT NULL,
+  `lecturer_id` int(250) NOT NULL,
+  `question_id` varchar(250) NOT NULL,
+  `ans` varchar(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `answers`
+--
+
+INSERT INTO `answers` (`id`, `fullname`, `code`, `student_id`, `lecturer_id`, `question_id`, `ans`) VALUES
+(2, '', '', '1', 0, '2', 'A'),
+(3, '', '', '1', 0, '3', 'D'),
+(4, '', '', '1', 0, '5', 'A'),
+(5, '', '', '1', 0, '6', 'B'),
+(6, '', '', '1', 0, '7', 'D'),
+(7, '', '', '1', 0, '1', 'A'),
+(8, '', '', '1', 0, '2', 'A'),
+(9, '', '', '1', 0, '3', 'D'),
+(10, '', '', '1', 0, '5', 'A'),
+(11, '', '', '1', 0, '6', 'A'),
+(12, '', '', '1', 0, '7', 'A'),
+(16, '', '', '1', 0, '5', 'A'),
+(17, '', '', '1', 0, '6', 'A'),
+(18, '', '', '1', 0, '7', 'D'),
+(38, 'Ata Ahenkorah', '22', '16', 0, '1', 'A'),
+(39, 'Ata Ahenkorah', '22', '16', 1, '5', 'B'),
+(40, 'Ata Ahenkorah', '22', '16', 1, '8', 'C'),
+(41, 'Ata Ahenkorah', '22', '15', 1, '2', 'A'),
+(42, 'Ata Ahenkorah', '22', '15', 1, '6', 'A');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `assignments`
+--
+
+CREATE TABLE `assignments` (
+  `id` int(11) NOT NULL,
+  `lecturer_id` varchar(250) NOT NULL,
+  `course` varchar(250) NOT NULL,
+  `code` varchar(250) NOT NULL,
+  `question` varchar(250) NOT NULL,
+  `optionA` varchar(250) NOT NULL,
+  `optionB` varchar(250) NOT NULL,
+  `optionC` varchar(250) NOT NULL,
+  `optionD` varchar(250) NOT NULL,
+  `answer` varchar(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `assignments`
+--
+
+INSERT INTO `assignments` (`id`, `lecturer_id`, `course`, `code`, `question`, `optionA`, `optionB`, `optionC`, `optionD`, `answer`) VALUES
+(1, '1', 'java', '001', 'What is java', 'processes', 'Louis Pasteur', 'crucible', 'GOD', 'A'),
+(2, '1', 'java', '001', 'Give the syntax for java', 'pipette', 'chemistry', 'crucible', 'GOD', 'A'),
+(3, '1', 'java', '001', 'Add two numbers in java', 'processes', 'chemistry', 'both a and b', 'GOD', 'D'),
+(4, '1', 'java', '001', 'What is the new java', 'biology', 'chemistry', 'physics', 'geology', 'D'),
+(5, '1', 'java', '001', 'What is java error?', 'processes', 'Louis Pasteur', 'crucible', 'geology', 'D'),
+(6, '1', 'java', '001', 'What is debugging in Java', 'processes', 'chemistry', 'crucible', 'GOD', 'D');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `assignment_setup`
+--
+
+CREATE TABLE `assignment_setup` (
+  `id` int(11) NOT NULL,
+  `title` varchar(250) NOT NULL,
+  `code` varchar(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `assignment_setup`
+--
+
+INSERT INTO `assignment_setup` (`id`, `title`, `code`) VALUES
+(1, 'mid sem', '001'),
+(2, 'End of Semester', '002');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `lecturers`
+--
+
+CREATE TABLE `lecturers` (
+  `id` int(11) NOT NULL,
+  `name` varchar(250) NOT NULL,
+  `course` varchar(250) NOT NULL,
+  `email` varchar(250) NOT NULL,
+  `password` varchar(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `lecturers`
+--
+
+INSERT INTO `lecturers` (`id`, `name`, `course`, `email`, `password`) VALUES
+(1, 'Oppong', 'java', 'lecturer1', 'lecturer1'),
+(2, 'Emmanuel', 'cpp', 'lecturer2', 'lecturer2');
 
 -- --------------------------------------------------------
 
@@ -279,7 +674,7 @@ CREATE TABLE `questions` (
   `id` int(11) NOT NULL,
   `course_name` varchar(255) DEFAULT NULL,
   `qualification` varchar(255) DEFAULT NULL,
-  `level` int(11) NOT NULL,
+  `level` varchar(250) NOT NULL,
   `year` int(11) NOT NULL,
   `question` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -289,23 +684,98 @@ CREATE TABLE `questions` (
 --
 
 INSERT INTO `questions` (`id`, `course_name`, `qualification`, `level`, `year`, `question`) VALUES
-(1, 'cpp', 'HND', 200, 2022, 'C++_PROGRAMMING_PAST_QUESTION (1).pdf'),
-(2, 'cpp', 'HND', 200, 2021, 'C++_PROGRAMMING_PAST_QUESTION (2).pdf'),
-(3, 'cpp', 'HND', 200, 2020, 'C++_PROGRAMMING_PAST_QUESTION (3).pdf'),
-(4, 'cpp', 'HND', 200, 2023, 'C++_PROGRAMMING_PAST_QUESTION (4).pdf'),
-(5, 'database', 'HND', 200, 2022, 'Database.pdf'),
-(6, 'database', 'HND', 200, 2020, 'Database3.pdf'),
-(7, 'database', 'HND', 200, 2019, 'Database4.pdf'),
-(8, 'hci', 'HND', 200, 2021, 'hci21l200.pdf'),
-(9, 'java', 'HND', 200, 2022, 'Java.pdf'),
-(10, 'cpp', 'HND', 200, 2023, 'Cpp Resit 2023.pdf'),
-(11, 'database', 'HND', 200, 2023, 'Database Resit 2023.pdf'),
-(12, 'ecom', 'HND', 200, 2019, 'ecom1.pdf'),
-(13, 'ecom', 'HND', 200, 2022, 'ecom2.pdf'),
-(14, 'com. skills', 'HND', 200, 2023, 'comskills23dep.pdf'),
-(15, 'com. skills', 'Btech', 100, 2023, 'comskills23btech.pdf'),
-(16, 'com. skills', 'HND', 200, 2023, 'comskills23HND.pdf'),
-(17, 'com. skills', 'HND', 100, 2023, 'comskills23dep.pdf');
+(1, 'cpp', 'HND', '200', 2022, 'C++_PROGRAMMING_PAST_QUESTION (1).pdf'),
+(2, 'cpp', 'HND', '200', 2021, 'C++_PROGRAMMING_PAST_QUESTION (2).pdf'),
+(3, 'cpp', 'HND', '200', 2020, 'C++_PROGRAMMING_PAST_QUESTION (3).pdf'),
+(4, 'cpp', 'HND', '200', 2023, 'C++_PROGRAMMING_PAST_QUESTION (4).pdf'),
+(5, 'database', 'HND', '200', 2022, 'Database.pdf'),
+(6, 'database', 'HND', '200', 2020, 'Database3.pdf'),
+(7, 'database', 'HND', '200', 2019, 'Database4.pdf'),
+(8, 'hci', 'HND', '200', 2021, 'hci21l200.pdf'),
+(9, 'java', 'HND', '200', 2022, 'Java.pdf'),
+(10, 'cpp', 'HND', '200', 2023, 'Cpp Resit 2023.pdf'),
+(11, 'database', 'HND', '200', 2023, 'Database Resit 2023.pdf'),
+(12, 'ecom', 'HND', '200', 2019, 'ecom1.pdf'),
+(13, 'ecom', 'HND', '200', 2022, 'ecom2.pdf'),
+(17, 'com. skills', 'DIP', '100', 2023, 'comskills23dep.pdf'),
+(18, 'java', 'Btech', '200', 2024, 'Fast Scan 06-01-2024 11_15.pdf'),
+(19, 'com. skills', 'HND', '100', 2018, 'COMMUNICATION SKILLS TWO  (3).pdf'),
+(20, 'com. skills', 'HND', '100', 2017, 'COMMUNICATION SKILLS TWO  (2).pdf'),
+(21, 'com. skills', 'HND', '100', 2017, 'COMMUNICATION SKILLS TWO  (1).pdf'),
+(22, 'com. skills', 'HND', '100', 2021, 'COMMUNICATION_SKILLS_ONE_PAST_QUESTION (1).pdf'),
+(23, 'com. skills', 'HND', '100', 2021, 'COMMUNICATION_SKILLS_ONE_PAST_QUESTION (1).pdf'),
+(24, 'com. skills', 'HND', '100', 2020, 'COMMUNICATION_SKILLS_ONE_PAST_QUESTION (2).pdf'),
+(25, 'com. skills', 'HND', '100', 2020, 'COMMUNICATION_SKILLS_ONE_PAST_QUESTION (3).pdf'),
+(26, 'com. skills', 'Btech', '100', 2021, 'COMMUNICATION_SKILLS_ONE_PAST_QUESTION (4).pdf'),
+(27, 'com. skills', 'Btech', '100', 2021, 'COMMUNICATION_SKILLS_ONE_PAST_QUESTION (5).pdf'),
+(28, 'com. skills', 'HND', '100', 2021, 'COMMUNICATION_SKILLS_ONE_PAST_QUESTION (7).pdf'),
+(29, 'com. skills', 'HND', '100', 2021, 'COMMUNICATION_SKILLS_ONE_PAST_QUESTION (6).pdf'),
+(30, 'com. skills', 'HND', '0', 2021, 'COMMUNICATION_SKILLS_ONE_PAST_QUESTION (6).pdf'),
+(31, 'infotech', 'HND', '100', 2021, 'INFORMATION_TECHNOLOGY_ONE_PAST_QUESTION (1).pdf'),
+(32, 'infotech', 'HND', 'Exams', 2016, 'INFORMATION TECHNOLOGY TWO (1).pdf'),
+(33, 'infotech', 'HND', 'Exams', 2017, 'INFORMATION TECHNOLOGY TWO (2).pdf'),
+(35, 'infotech', 'HND', 'Exams', 2017, 'INFORMATION TECHNOLOGY TWO (3).pdf'),
+(36, 'infotech', 'HND', 'Exams', 2017, 'INFORMATION TECHNOLOGY TWO.pdf'),
+(37, 'com. skills', 'HND', 'Exam', 2021, 'INFORMATION_TECHNOLOGY_ONE_PAST_QUESTION (1).pdf'),
+(38, 'com. skills', 'HND', 'Resit', 2018, 'INFORMATION_TECHNOLOGY_ONE_PAST_QUESTION (2).pdf'),
+(39, 'com. skills', 'HND', 'Exam', 2019, 'INFORMATION_TECHNOLOGY_ONE_PAST_QUESTION (3).pdf'),
+(40, 'com. skills', 'HND', 'Exam', 2021, 'INFORMATION_TECHNOLOGY_ONE_PAST_QUESTION (4).pdf'),
+(41, 'com. skills', 'HND', 'Exam', 2022, 'INFORMATION_TECHNOLOGY_ONE_PAST_QUESTION (5).pdf'),
+(42, 'java', 'HND', 'Exam', 2017, 'JAVA PROGRAMMING (1).pdf'),
+(43, 'java', 'HND', 'Mid-Sem', 2017, 'JAVA PROGRAMMING (4).pdf'),
+(44, 'java', 'HND', 'Exam', 2020, 'JAVA PROGRAMMING (6).pdf'),
+(45, 'java', 'HND', 'Exam', 2018, 'JAVA PROGRAMMING (7).pdf'),
+(46, 'java', 'HND', 'Exam', 2018, 'JAVA PROGRAMMING (8).pdf'),
+(47, 'com app', 'Btech', 'Exams', 2022, 'COMPUTER_APPLICATIONS_PAST_QUESTION (1).pdf'),
+(48, 'com app', 'HND', 'Exams', 2020, 'COMPUTER_APPLICATIONS_PAST_QUESTION (2).pdf'),
+(49, 'com app', 'Btech', 'Resit', 2021, 'COMPUTER_APPLICATIONS_PAST_QUESTION (3).pdf'),
+(50, 'com app', 'HND', 'Mid-Sem', 2021, 'COMPUTER_APPLICATIONS_PAST_QUESTION (4).pdf'),
+(51, 'com app', 'HND', 'Exams', 2016, 'COMPUTER_APPLICATIONS_PAST_QUESTION (5).pdf'),
+(52, 'com app', 'HND', 'Exams', 2019, 'COMPUTER_APPLICATIONS_PAST_QUESTION (6).pdf'),
+(53, 'com app', 'HND', 'Exams', 2019, 'COMPUTER APPLICATION IN HOSPITALITY MANAGEMENT.pdf'),
+(54, 'com app', 'HND', 'Exams', 2018, 'COMPUTER APPLICATIONS IN HOSPITALITY.pdf'),
+(55, 'com app', 'HND', 'Exams', 2018, 'COOMUNICATION IN HOSPITALITY.pdf'),
+(56, 'african studies', 'HND', 'Exams', 2012, 'AFRICAN STUDIES_PAST_QUESTION (1).pdf'),
+(57, 'african studies', 'HND', 'Exams', 2011, 'AFRICAN STUDIES_PAST_QUESTION (2).pdf'),
+(58, 'african studies', 'HND', 'Exams', 2021, 'AFRICAN STUDIES_PAST_QUESTION (3).pdf'),
+(59, 'african studies', 'HND', 'Exams', 2018, 'AFRICAN STUDIES_PAST_QUESTION (3).pdf'),
+(60, 'african studies', 'HND', 'Exams', 2019, 'AFRICAN_STUDIES_PAST_QUESTION (5).pdf'),
+(61, 'african studies', 'HND', 'Mid-Sem', 2016, 'AFRICAN_STUDIES_PAST_QUESTION (6).pdf'),
+(62, 'african studies', 'HND', 'Resit', 2018, 'AFRICAN_STUDIES_PAST_QUESTION (7).pdf'),
+(63, 'african studies', 'Btech', 'Exams', 2021, 'AFRICAN_STUDIES_PAST_QUESTION (8).pdf'),
+(64, 'african studies', 'HND', 'Exams', 2020, 'AFRICAN_STUDIES_PAST_QUESTION (9).pdf'),
+(65, 'african studies', 'HND', 'Mid-Sem', 2016, 'AFRICAN STUDIES_PAST_QUESTION (9).pdf'),
+(66, 'african studies', 'HND', 'Mid-Sem', 2019, 'AFRICAN STUDIES_PAST_QUESTION (10).pdf');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `scores`
+--
+
+CREATE TABLE `scores` (
+  `id` int(11) NOT NULL,
+  `student_id` varchar(250) NOT NULL,
+  `student_name` varchar(250) NOT NULL,
+  `lecturer_id` varchar(250) NOT NULL,
+  `code` varchar(250) NOT NULL,
+  `marks` varchar(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `started`
+--
+
+CREATE TABLE `started` (
+  `id` int(11) NOT NULL,
+  `course` varchar(250) NOT NULL,
+  `title` varchar(250) NOT NULL,
+  `code` varchar(250) NOT NULL,
+  `lecturer_id` varchar(250) NOT NULL,
+  `lecturer_name` varchar(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -316,7 +786,9 @@ INSERT INTO `questions` (`id`, `course_name`, `qualification`, `level`, `year`, 
 CREATE TABLE `students` (
   `id` int(11) NOT NULL,
   `fullName` varchar(50) NOT NULL,
+  `username` varchar(250) NOT NULL,
   `email` varchar(50) NOT NULL,
+  `department` varchar(250) NOT NULL,
   `password` varchar(255) NOT NULL,
   `registration_date` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -325,16 +797,126 @@ CREATE TABLE `students` (
 -- Dumping data for table `students`
 --
 
-INSERT INTO `students` (`id`, `fullName`, `email`, `password`, `registration_date`) VALUES
-(1, 'Oppong Coffie', 'student1', 'student1', '2023-11-16 03:22:13'),
-(2, 'Oppong Coffie', 'godblessme5011', '', '2023-11-30 10:58:11'),
-(3, 'AA', 'A', 'A', '2023-12-10 19:44:05'),
-(4, 'Bh', 'Ui', 'uu', '2023-12-10 20:20:44'),
-(5, 'JamAGod ', 'yanksonpaa04@gmail.com', 'qwertyuiop', '2023-12-10 22:17:14');
+INSERT INTO `students` (`id`, `fullName`, `username`, `email`, `department`, `password`, `registration_date`) VALUES
+(1, 'Oppong Coffie', '', 'student1', '', 'student1', '2023-11-16 03:22:13'),
+(2, 'Oppong Coffie', '', 'godblessme5011', '', '', '2023-11-30 10:58:11'),
+(4, 'Bh', '', 'Ui', '', 'uu', '2023-12-10 20:20:44'),
+(5, 'JamAGod ', '', 'yanksonpaa04@gmail.com', '', 'qwertyuiop', '2023-12-10 22:17:14'),
+(6, 'Concert Boy', '', 'cboy@gmail.com', '', 'password', '2023-12-20 13:13:17'),
+(7, 'Max', '', 'nur30067@zslsz.com', '', 'Nur30067@zslsz.com1', '2023-12-20 21:21:17'),
+(8, 'ss', '', 'ss', '', 'ss', '2024-01-02 18:00:03'),
+(9, 'kwekuboat', '', 'khodednova@gmail.com', '', '14112001', '2024-01-02 21:46:46'),
+(10, 'Wadosty', '', 'Wadostyisaac@gmail.com', '', 'Wadosty1010', '2024-01-04 13:03:10'),
+(11, 'Joseph baah', '', 'kojob603@gmail.com', '', 'kojobaah246', '2024-01-04 13:03:24'),
+(15, '', '', '', '', '', '2024-01-04 13:05:21'),
+(17, 'kwameattipoe12', '', 'kwameattipoe12@gmail.com', '', '0030109107', '2024-01-04 13:29:24'),
+(18, 'Ishmael Sozah', '', 'ishmaelsozah@gmail.com', '', 'sweetjey', '2024-01-04 13:30:28'),
+(21, 'Theodora ', '', 'theodoracobbinah261@gmail.com', '', 'madeinghana1', '2024-01-04 13:34:22'),
+(23, 'Gideon Frimpong Dadzie', '', 'dadziegideon823@gmail.com', '', 'miss.dawson1', '2024-01-04 13:42:20'),
+(24, 'Hybrain ', '', 'hybrain2811@gmail', '', 'sam0505443800', '2024-01-04 13:44:16'),
+(27, 'Tweneboah Gideon', '', 'tg5753264@gmail.com', '', 'Myttustudies', '2024-01-04 13:58:25'),
+(28, 'Kornaa Kadir ', '', 'Kornaakadir447@gmail.com', '', 'Mygmail.com2', '2024-01-04 14:32:31'),
+(29, 'Blaisedrich Ndede Ackah ', '', 'pastorkuma5050@gmail.com', '', 'pasTor5050', '2024-01-04 14:35:35'),
+(31, 'Godswill', '', 'gconduah11@gmail.com', '', 'Tawiah11', '2024-01-04 16:25:16'),
+(32, 'Kenneth Samuel', '', 'kennethfugar25@gmail.com', '', 'Cleanstoneminessa!!!', '2024-01-04 18:20:10'),
+(38, 'Godfred', '', 'Quarm', '', 'GodwinQuarm@1', '2024-01-05 12:59:26'),
+(39, 'Godfred', '', 'godfredquarm123@gmail.com', '', 'GodwinQuarm@1', '2024-01-05 14:15:03'),
+(40, 'hilary', '', 'hilaryaa@yahoo.com', '', '998822', '2024-01-05 16:28:23'),
+(43, 'Ata Ahenkorah', 'ata', 'ata@gmail.com', 'it', '5011', '2024-01-06 19:25:23'),
+(44, 'Michael', 'BMiche', 'mariadonna595@gmail.com', 'it', 'cookielyon19', '2024-01-06 21:41:50'),
+(45, 'Godwin', 'Nana Amoah', 'godwinnanaamoah1975@gmail.com', 'it', 'Go0535957055', '2024-01-07 01:32:22'),
+(46, 'Maxwell Mokwah', 'Maxwell Mokwah ', 'maxwellmokwah@gmail.com', 'it', 'Sarahmokwah1234', '2024-01-07 06:51:59'),
+(47, 'mends', 'gyan', 'gyankwadwomends2001@gmail.com', 'it', 'mends1234', '2024-01-07 14:26:25'),
+(48, 'Cosmos Dadzie ', 'CDJ', 'dadziecosmosjunior9321@gmail.com', 'it', 'Wodaada24', '2024-01-08 16:34:34'),
+(49, 'Ata Ahenkorah ', 'Aya', 'oppongcoffie27@gmail.com ', 'it', '5011', '2024-01-09 18:46:29'),
+(50, 'Mike', 'Mikekofii', 'kofiatomari@gmail.com', 'it', '12345', '2024-01-09 20:53:46'),
+(51, 'Washington Harris-osei', 'Washington', 'nanayaairis_quiss@icloud .com', 'it', 'Lilkenquis2', '2024-01-10 22:25:37'),
+(52, 'Onan Knowledge ', 'Kwabiionan', 'kwabiionan@gmail.com', 'it', 'Cj7campus', '2024-01-10 22:32:46'),
+(53, 'GAD KATEY OCANSEY', 'Gadoo', 'gad.ocansey@ttu.edu.gh', 'it', '11111111', '2024-01-14 21:02:42'),
+(57, 'Isaac Carry ', 'Big Nasty', 'nastynicee4@gmail.com', 'it', 'qwerty123', '2024-01-18 15:48:30'),
+(58, 'Leah Dugbartey Dornukie ', 'twilight', 'BCITS23033@ttu.edu.gh', 'it', 'BPXVNKWD4', '2024-01-18 15:59:53'),
+(59, 'Agbettor Jona', 'Jona', 'agbettorj1@gmail.com', 'it', 'Brainboi1', '2024-01-24 21:57:49'),
+(60, 'Pm Devs', 'Pmd', 'bci360gh@gmail.com', 'it', 'pmd100', '2024-01-24 21:58:59'),
+(61, 'Benjamin Benya ', 'qweku.triggered', 'benjaminbenya08@gmail.com', 'it', 'vrockpokey1', '2024-01-24 21:59:07'),
+(62, 'Mhame Yhaa', 'Mhame ', 'mhameyhaa6@gmail.com', 'it', 'Mhame123', '2024-01-24 21:59:33'),
+(63, 'Daniel', '5star Danny', 'cobbinahdaniel17@gmail.com', 'it', '6dan6iel2', '2024-01-24 22:02:51'),
+(64, 'Blaq', 'Blaq0', 'mosquitogh55@gmail.com', 'it', 'qwerty', '2024-01-24 22:03:07'),
+(65, 'Digital', 'Louis', 'digitallouis4@gmail.com', 'it', 'simple123', '2024-01-24 22:11:02'),
+(66, 'Boakye Frederick', 'realboss', 'boakyefred2070@icloud.com', 'it', 'realBoss12345', '2024-01-24 22:38:40'),
+(67, 'Pious Armoh', '@pious', 'piusarmoh1@gmail.com', 'it', 'Vero0503', '2024-01-24 22:55:04'),
+(68, 'Gershon Korley Dzeagu ', 'Gershonson', 'gershondzeagu@gmail.com', 'it', 'levelup', '2024-01-24 23:00:22'),
+(69, 'Emmanuel Mensah Addai', 'Addai58', '0721000012@ttu.edu.gh', 'it', 'Linkwise58@', '2024-01-24 23:01:52'),
+(70, 'Olivia ', 'Mensah ', '815mensaholivia@gmail.com', 'it', 'olivia815', '2024-01-25 00:17:33'),
+(72, 'Abdulai ', 'ibrahim', 'belindajackson470@gmail.com', 'it', 'Abdulai35', '2024-01-25 01:00:36'),
+(73, 'patrick gyamfi', 'Pkay ', 'nanakojo1435@gmail.com', 'it', 'pkay1435', '2024-01-25 01:12:02'),
+(74, 'Eugene ekow quarshie', 'Eugene1', 'Eugenequarshie2016@gmail.com', 'it', 'Eugy6255e', '2024-01-25 04:35:20'),
+(75, 'Amaana Ishaque ', 'Amaana ', 'amaanaishaquehayfeen@gmail.com', 'it', 'Amaana', '2024-01-25 06:14:16'),
+(76, 'Michael Narteh ', 'Micky ', '0720000280@ttu.edu.gh', 'it', 'mickymj', '2024-01-25 06:55:19'),
+(77, 'Amoayiti Akanyakum ', 'John', 'amoayitijohn8@gmail.com', 'it', 'peFvu5-denhix-qarpit', '2024-01-25 06:56:45'),
+(78, 'GYESIE PAUL JUNIOR ', 'PAUL GOLD ', 'paulgyesiejunior7@gmail.com', 'it', 'Goldboy.pajun22', '2024-01-25 07:22:58'),
+(79, 'Naomi Larteyley Lartey', 'Maame Esi', 'larteynaomi39@gmail.com', 'it', 'Mama2232', '2024-01-25 07:32:02'),
+(80, 'Charlotte', 'Bala ', 'balacharlotte759@gmail.com', 'it', 'AkosuA20', '2024-01-25 07:45:56'),
+(81, 'Kkkjo', 'Hh', 'Jk@mm', 'it', '12345', '2024-01-25 07:55:11'),
+(82, 'Enock Baidoo', 'ENOCKBAIDOO', 'enock.12baidoo@gmail.com', 'it', 'Baidoo2003', '2024-01-25 07:55:37'),
+(83, 'Cephas', 'Beckley', 'cephasbeck23@gmail.com ', 'it', '@Mancity123', '2024-01-25 08:28:24'),
+(84, 'Emmanuel ', 'Osei kwame ', 'ek9427544@gmail.com', 'it', 'Emma@709', '2024-01-25 08:58:59'),
+(85, 'Louisa bruce ', 'Louisa ', 'Louisabruce557@gmail.com', 'it', '0592235950AA', '2024-01-25 09:05:36'),
+(86, 'King ', 'Jamal', 'jamalabdulnasel@gmail.com', 'it', 'gobboj-coxhy8-niDdud', '2024-01-25 09:27:23'),
+(87, 'Daniel ', 'Dadzie ', 'ddanzzy97@gmail.com', 'it', 'danzzy97', '2024-01-25 10:34:16'),
+(88, 'Kofi Obuom Agyare', 'Seyram', 'kofiobuomagyare@gmail.com', 'it', 'Kofi@Seyram08', '2024-01-25 11:49:12'),
+(89, 'Boadu-Dwamena David ', 'David109', 'boaddavid1@gmail.com', 'it', 'King0547938109', '2024-01-25 12:45:51'),
+(90, 'Oscar Love Stephens', 'Oscar Love ', 'stephensoscar603@gmail.com ', 'it', 'Oscarlove03', '2024-01-25 13:47:35'),
+(91, 'nana prah', 'nanaDC69', 'kuntuebo@gmail.com', 'it', '13May2021', '2024-01-25 15:22:01'),
+(92, 'Martin Nyankey', '0722000013', '0722000013@ttu.edu.com', 'it', 'EYEF7XUA', '2024-01-25 16:41:58'),
+(93, 'ELLIOT EDMUND GARDENER', 'Delali', 'delalieddie@icloud.com', 'it', 'Delali@1994', '2024-01-25 17:07:47'),
+(94, 'Clement Ansah ', 'CKAnsah', 'kwameansah24@gmail.com', 'it', 'passw0rd', '2024-01-25 17:30:14'),
+(95, 'EBENEZER KOFI ANSAH-WALTERS ', 'Kofi Walters ', 'kofiwalters45@gmail.com', 'it', 'Dr@kw0402', '2024-01-25 17:38:36'),
+(98, 'John Adonso', 'Adonso', 'Johnquansah498@gmail.com', 'it', 'Adonso@12345', '2024-01-25 18:20:27'),
+(99, 'ABROKWAH BEDZRAH NANA', 'Abrokwah', 'nanaabrokwah9@gmail.com', 'it', 'Abrokwah1', '2024-01-26 07:10:47'),
+(100, 'Joe Tetteh ', 'Nii', 'tetteh0547@gmail.com', 'it', 'Iii@1234', '2024-01-26 18:49:21'),
+(101, 'SILAS BOTCHEY ', 'Kwaku_Dunga ', 'silasbotchey97@gmail.com', 'it', 'Botchey97', '2024-01-29 11:44:32'),
+(102, 'Duodu Frimpong ', 'Dblaz ', 'blazdanny@gmail.com', 'it', '200494', '2024-02-02 06:52:59'),
+(103, 'Ebenezer', 'Nk', 'ebenezeradjeisah2003@gmail.com', 'it', '11111', '2024-02-12 17:19:21'),
+(104, 'John', 'John', 'John@gmail.com', 'it', '1234', '2024-02-12 17:21:32'),
+(105, 'Judith Ackaah-Gyasi ', 'Adwoa', 'ackaahgyasijudithpraizes@gmail.com', 'it', 'judie2002', '2024-02-12 17:49:11'),
+(107, 'Ebenezer Mensah ', 'ebenezermensah2550@gmail.com', 'ebenezermensah2550@gmail.com', 'it', '71018', '2024-02-21 14:41:06'),
+(108, 'Emmanuel Ajigiwe Atio ', 'Ajigiwe ', 'minatoflash82@gmail.com', 'it', 'vader123', '2024-02-22 09:03:11'),
+(109, 'ABOAGYE NICHOLAS AKOMENG ELKANNAH ', 'unknown1107', 'elkannahnichol@gmail.com', 'it', 'Nakae@21..', '2024-02-24 16:58:00'),
+(110, 'Dora Fie', 'Blaq', 'dorese26@gmail.com', 'it', '0550083698', '2024-02-25 16:14:37');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `access_practice_questions`
+--
+ALTER TABLE `access_practice_questions`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `answers`
+--
+ALTER TABLE `answers`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `assignments`
+--
+ALTER TABLE `assignments`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `assignment_setup`
+--
+ALTER TABLE `assignment_setup`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `lecturers`
+--
+ALTER TABLE `lecturers`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `practice_questions`
@@ -349,6 +931,18 @@ ALTER TABLE `questions`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `scores`
+--
+ALTER TABLE `scores`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `started`
+--
+ALTER TABLE `started`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `students`
 --
 ALTER TABLE `students`
@@ -360,6 +954,36 @@ ALTER TABLE `students`
 --
 
 --
+-- AUTO_INCREMENT for table `access_practice_questions`
+--
+ALTER TABLE `access_practice_questions`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=237;
+
+--
+-- AUTO_INCREMENT for table `answers`
+--
+ALTER TABLE `answers`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+
+--
+-- AUTO_INCREMENT for table `assignments`
+--
+ALTER TABLE `assignments`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `assignment_setup`
+--
+ALTER TABLE `assignment_setup`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `lecturers`
+--
+ALTER TABLE `lecturers`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `practice_questions`
 --
 ALTER TABLE `practice_questions`
@@ -369,13 +993,25 @@ ALTER TABLE `practice_questions`
 -- AUTO_INCREMENT for table `questions`
 --
 ALTER TABLE `questions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
+
+--
+-- AUTO_INCREMENT for table `scores`
+--
+ALTER TABLE `scores`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `started`
+--
+ALTER TABLE `started`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `students`
 --
 ALTER TABLE `students`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=111;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
