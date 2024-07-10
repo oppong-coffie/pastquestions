@@ -30,6 +30,7 @@
                                 <option value="basic electronics">BASIC ELECTRONICS</option>
                                 <option value="principles">PRINCIPLES OF PRINCIPLES</option>
                                 <option value="accounting1">ACCOUNTING 1</option>
+                                <option value="accounting2">ACCOUNTING 2</option>
                             </select>
                         </div>
 

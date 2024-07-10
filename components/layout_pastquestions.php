@@ -134,6 +134,15 @@ $sql_accounting1_count="SELECT COUNT(id) FROM questions WHERE course_name ='acco
 $query_accounting1_count=mysqli_query($dbcon, $sql_accounting1_count);
 $fetch_accounting1_count=mysqli_fetch_assoc($query_accounting1_count);
 
+
+// get the ACCOUNTING2 data from the questions table
+$sql_accounting2="SELECT * FROM questions WHERE course_name ='accounting2'";
+$query_accounting2=mysqli_query($dbcon, $sql_accounting2);
+// get the Total number of ACCOUNTING1 questions from the questions table
+$sql_accounting2_count="SELECT COUNT(id) FROM questions WHERE course_name ='accounting2'";
+$query_accounting2_count=mysqli_query($dbcon, $sql_accounting2_count);
+$fetch_accounting2_count=mysqli_fetch_assoc($query_accounting2_count);
+
 ?>
 
 
@@ -229,6 +238,12 @@ $fetch_accounting1_count=mysqli_fetch_assoc($query_accounting1_count);
                                 <a id="cardaccounting" class="">
                                     <i class="metismenu-icon fa fa-book"></i>
                                      Accounting 1
+                                </a>
+                            </li>
+                            <li id="accounting2Div1" class="hamburger--elastic mobile-toggle-nav is-active">
+                                <a id="card2accounting2" class="">
+                                    <i class="metismenu-icon fa fa-book"></i>
+                                     Accounting 2
                                 </a>
                             </li>
 
@@ -482,6 +497,20 @@ $fetch_accounting1_count=mysqli_fetch_assoc($query_accounting1_count);
                                 </div>
                             </div>
 
+                            <div id="accounting2Div2" class="col-md-6 col-xl-4">
+                                <div class="card mb-3 widget-content bg-plum-plate">
+                                    <div class="widget-content-wrapper text-white"  id="cardaccounting22">
+                                        <div class="widget-content-left">
+                                            <div class="widget-heading">2012 - 2024</div>
+                                            <div class="widget-subheading"><?php echo $fetch_accounting2_count['COUNT(id)'] ?> copies</div>
+                                        </div>
+                                        <div class="widget-content-right">
+                                            <div class="widget-numbers text-white"><span>Accounting 2</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div id="principlesDiv2" class="col-md-6 col-xl-4">
                                 <div class="card mb-3 widget-content bg-plum-plate">
                                     <div class="widget-content-wrapper text-white"  id="cardprinciples">
@@ -671,6 +700,14 @@ $fetch_accounting1_count=mysqli_fetch_assoc($query_accounting1_count);
         $("#cardaccounting2").on("click", function() {
             $("#detail-container").toggleClass("detail");
         });
+        
+        // Accounting 2
+        $("#card2accounting2").on("click", function() {
+            $("#detail-container").toggleClass("detail");
+        });
+        $("#cardaccounting22").on("click", function() {
+            $("#detail-container").toggleClass("detail");
+        });
 
 // THE CLOSE X BUTTON
         $("#x").on("click", function() {
@@ -818,6 +855,49 @@ $fetch_accounting1_count=mysqli_fetch_assoc($query_accounting1_count);
         }
     </script>"; 
     // END:: ACCOUNTING 1
+?>
+
+<?php
+    $pcount=1;
+    // START:: ACCOUNTING 2
+    echo "<script>
+    document.getElementById('accounting2Div2').onclick = accountingitems;
+    document.getElementById('accounting2Div1').onclick = accountingitems;
+        function accountingitems() {
+        var tableHTML = '<table>' +
+            '<thead>' +
+            '<tr>' +
+            '<th>ID</th>' +
+            '<th>Qua</th>' +
+            '<th>Course</th>' +
+            '<th>Year</th>' +
+            '<th>Type</th>' +
+            '<th>Action</th>' +
+            '</tr>' +
+            '</thead>' +
+            '<tbody>';
+        ";
+    while ($row_accounting2 = mysqli_fetch_assoc($query_accounting2)) {    
+        echo "tableHTML += 
+            '<tr>' +
+            '<th scope=\"row\">" . $pcount . "</th>' +
+            '<td>" . $row_accounting2['qualification'] . "</td>' +
+            '<td>" . $row_accounting2['course_name'] . "</td>' +
+            '<td>" . $row_accounting2['year'] . "</td>' +
+            '<td>" . $row_accounting2['level'] . "</td>' +
+            '<td>' +
+            '<a href=\"../uploaded_questions/" . $row_accounting2['question'] . "\" download><button class=\"mb-2 mr-2 border-0 btn-transition btn btn-outline-warning\">Download</button></a>' +
+            '</td>' +
+            '</tr>';
+        ";
+        $pcount++;
+    }   
+    echo "
+            tableHTML += '</tbody></table>';
+            document.getElementById('btech').innerHTML = tableHTML;
+        }
+    </script>"; 
+    // END:: ACCOUNTING 2
 ?>
 
     <?php
